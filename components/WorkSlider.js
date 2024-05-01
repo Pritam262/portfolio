@@ -5,18 +5,18 @@ export const workSlider = {
       images: [
         {
           title: 'Inventory Management System',
-          path: '/thumb6.jpg',
-          link:'http://13.48.193.81'
+          path: '/ims.png',
+          link:'#'
         },
         {
           title: 'Notebook',
           path: '/iNotebook.jpg',
-          link:'http://13.48.193.81'
+          link:'#'
         },
         {
           title: 'Grosery Bud',
           path: '/thumb3.jpg',
-          link:'/'
+          link:'#'
         },
         {
           title: 'Accordition app',
@@ -41,6 +41,7 @@ import { Pagination } from 'swiper';
 import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
 const WorkSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

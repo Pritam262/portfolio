@@ -1,3 +1,4 @@
+import {React} from "react";
 //Farmer motion
 import {motion} from 'framer-motion'
 //variants
