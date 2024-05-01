@@ -6,22 +6,46 @@ export const workSlider = {
         {
           title: 'Inventory Management System',
           path: '/ims.png',
-          link:'#'
+          link: 'http://ims.pritamjana.com'
         },
         {
           title: 'Notebook',
           path: '/iNotebook.jpg',
-          link:'#'
+          link: '#'
         },
         {
-          title: 'Grosery Bud',
+          title: 'Ecommerce',
+          path: '/ecommerce.png',
+          link: 'https://ecommerce.pritamjana.com'
+        },
+        {
+          title: 'Blog',
+          path: '/blog.png',
+          link: 'https://blog.pritamjana.com'
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: 'Inventory Management System',
           path: '/thumb3.jpg',
-          link:'#'
+          link: '#'
         },
         {
-          title: 'Accordition app',
+          title: 'Notebook',
           path: '/thumb5.jpg',
-          link:'https://accordionn-app.netlify.app'
+          link: '#'
+        },
+        {
+          title: 'Ecommerce',
+          path: '/ecommerce.png',
+          link: 'https://ecommerce.pritamjana.com'
+        },
+        {
+          title: 'Blog',
+          path: '/blog.png',
+          link: 'https://blog.pritamjana.com'
         },
       ],
     },
@@ -33,7 +57,7 @@ export const workSlider = {
 // data
 import { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion } from 'framer-motion';
+
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
@@ -45,6 +69,8 @@ import React from 'react';
 
 const WorkSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+
 
   const numSlidesPerBottom = 3;
 
@@ -72,12 +98,12 @@ const WorkSlider = () => {
     <div className="relative">
       <Swiper
         ref={swiperRef} // Attach the swiperRef to the Swiper component
-        spaceBetween={10}
+        spaceBetween={30}
         pagination={{
           clickable: true,
         }}
-        modules={{ Pagination }}
-        className="h-[280px] sm:h-[480px] "
+        modules={[Pagination]}
+        className="sm:h-max md:h-[480px] "
       >
         {workSlider.slides.map((slide, index) => {
           return (
@@ -88,26 +114,26 @@ const WorkSlider = () => {
                     <div className="relative rounded-lg overflow-hidden flex items-center group" key={index}>
                       <div className="flex items-center justify-center relative overflow-hidden group">
                         {/* Image */}
-                        <Image src={image.path} width={500} height={300} alt="" />
+                        <Image src={image.path} width={500} height={300} alt="" priority />
                         {/* overlay gradient */}
                         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700 "></div>
                         {/* title */}
                         <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                            <Link href={image.link}>
+                          <Link href={image.link}>
                             <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] ">
-                            {/* title part-1*/}
-                            <div className="delay-100">{image.title}</div>
-                        
-                          </div>
-                          <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] ">
-                            {/* title part-1*/}
-                            <div className="delay-100">LIVE</div>
-                            {/* title part 2 */}
-                            <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROJECT</div>
-                            {/* icon */}
-                            <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200"><BsArrowRight /></div>
-                          </div>
-                            </Link>
+                              {/* title part-1*/}
+                              <div className="delay-100">{image.title}</div>
+
+                            </div>
+                            <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] ">
+                              {/* title part-1*/}
+                              <div className="delay-100">LIVE</div>
+                              {/* title part 2 */}
+                              <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROJECT</div>
+                              {/* icon */}
+                              <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200"><BsArrowRight /></div>
+                            </div>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -119,7 +145,8 @@ const WorkSlider = () => {
         })}
       </Swiper>
       {/* Pagination buttons */}
-   
+
+
     </div>
   );
 };

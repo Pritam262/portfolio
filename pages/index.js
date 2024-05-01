@@ -27,7 +27,7 @@ const Home = () => {
         {/* title */}
         <motion.h1 variants={fadeIn('down', 0.2)} initial="hidden" animate="show" exit='hidden' className="h1">Transforming Ideas <br /> Into <span className="text-accent">Digital Reality</span></motion.h1>
         {/* Subtitle */}
-        <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit='hidden' className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium expedita nobis, adipisci, ullam cum molestias suscipit vel quaerat animi quibusdam beatae deleniti error dolorem maiores. Eum magnam tempore facere. Culpa!</motion.p>
+        <motion.p variants={fadeIn('down', 0.3)} initial="hidden" animate="show" exit='hidden' className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">As a full-stack web developer, I leverage my expertise in both front-end and back-end technologies to craft dynamic and user-centric digital solutions that seamlessly integrate functionality with elegant design.</motion.p>
         {/* Project button */}
         <div className="flex justify-center xl:hidden relative">
           <ProjectSBtn />
